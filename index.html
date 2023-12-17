@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel booking form</title>
+</head>
+<body>
+    <form action="server.html" method="post">
+        <fieldset>
+          <legend>Personal Details:</legend>
+          <label for="username">Username:</label>
+          <input id="username" type="text" placeholder="Your name" required autofocus pattern="[a-zA-Z]{3,}" title="Please enter in more than 3 letters">
+          
+          <label for="email">Email:</label>
+          <input id="email" type="email" placeholder="Your Email" required pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}" title="Please enter in valid email address">
+          
+          <label for="phone">Phone:</label>
+          <input id="phone" type="tel" placeholder="Your phone number" required pattern="[0-9]{4} [0-9]{3} [0-9]{3}" title="Please enter in phone number in this format: #### ### ###">
+          
+          <select name="country" required>
+            <option value=""> </option>
+            <option value="DZ">Algeria</option>
+            <option value="FR">France</option>
+            <option value="SP">Spain</option>
+            <option value="CA">Canada</option>
+          </select>
+          
+          <br>
+          
+        </fieldset>
+        <fieldset>
+          <legend>Booking Details:</legend>
+          
+          <label for="date">Booking Date:</label>
+          <input id="date" type="date" name="date" min="2023-01-01" max="2024-12-01">
+          
+          <label for="number_of_guests">Number of Guests:</label>
+          <input id="number_of_guests" type="number" name="number_of_guests" min="1" max="5">
+          
+          <p>Do you require meals?</p>
+          
+          <label for="yes_meal">Yes:</label>
+          <input id="yes_meal" type="radio" name="meals" value="yesMeals">
+          <label for="no_meal">No:</label>
+          <input id="no_meal" type="radio" name="meals" value="noMeals">
+          
+          <br>
+          
+          <label for="balcony">Do you require balcony?</label>
+          <input id="balcony" type="checkbox" name="balcony" value="yes">
+                    
+          <br>
+          <br>
+          
+          <input type="submit" value="Soumettre">
+          
+        </fieldset>
+    </form>
+</body>
+</html>
